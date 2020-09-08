@@ -1,0 +1,38 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>整屏滚动效果</title>
+	<meta name="viewport" content="width=device-width" />
+	<style>
+	html,body{
+		margin: 0;
+		overflow-y: hidden;
+		height:100vh;
+	}
+	.main{
+		position:relative;
+		transition:all .6s ease;
+		top:0;
+	}
+	.main div{
+		position:relative;
+		height:100vh;
+		background-attachment:fixed;
+		background-size: cover;
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+	<div class="main">
+		<div style="background-color:#99cccc;"><p style="font-size:30px;color:#FFF;">第一屏</p></div>
+		<div style="background-color:#ffcc99;"><p style="font-size:30px;color:#FFF;">第二屏</p></div>
+		<div style="background-color:#99cc99;"><p style="font-size:30px;color:#FFF;">第三屏</p></div>
+	</div>
+</body>
+<script src="./main.js"></script>
+<script>
+	jsFSVS('.main','div')
+</script>
+</html>
